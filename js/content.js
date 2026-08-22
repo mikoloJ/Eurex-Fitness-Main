@@ -1,5 +1,5 @@
 /* ============================================================
-   EUREX FITNESS — SITE CONTENT
+   EUREX FITNESS: SITE CONTENT
    ============================================================
    ✏️  THIS IS THE ONLY FILE YOU NEED TO EDIT FOR TEXT & LINKS.
    Change any text between the quotes " ... " and re-upload
@@ -27,7 +27,7 @@ const SITE = {
   popup: {
     enabled: true,
     title: "New here? Start strong.",
-    text: "Join the Eurex Fitness community and get a free wellness starter guide — plus class schedules and weight-loss tips straight from Dania.",
+    text: "Join the Eurex Fitness community and get a free wellness starter guide, plus class schedules and weight-loss tips straight from Dania.",
     image: "assets/popup.jpg",
     buttonText: "Join Now",
     buttonLink: "join.html",
@@ -38,7 +38,7 @@ const SITE = {
   home: {
     heroEyebrow: "Eurex Fitness · Weight Loss & Wellness",
     heroTitle: "Lose the weight.\nKeep the life.",
-    heroText: "Coaching, classes and real-food plans by Dania Eunice — built for lasting results, not crash diets.",
+    heroText: "Coaching, classes and real-food plans by Dania Eunice, built for lasting results, not crash diets.",
     heroButton1: { text: "Join Now", link: "join.html" },
     heroButton2: { text: "See Plans & Classes", link: "plans.html" },
     heroImage: "assets/hero.jpg",
@@ -59,7 +59,7 @@ const SITE = {
     pillarsTitle: "Four ways to start",
     pillars: [
       { mark: "01", title: "Weight-loss coaching", text: "One-on-one guidance with weekly check-ins, realistic targets and honest accountability." },
-      { mark: "02", title: "Group classes",        text: "High-energy sessions that burn fat and build community — online and in person." },
+      { mark: "02", title: "Group classes",        text: "High-energy sessions that burn fat and build community, online and in person." },
       { mark: "03", title: "Meal & lifestyle plans", text: "Simple, affordable food plans built around what you already eat. No starving." },
       { mark: "04", title: "Wellness education",   text: "Courses, books and articles that teach you how your body actually works." },
     ],
@@ -67,7 +67,7 @@ const SITE = {
     howItWorksEyebrow: "How it works",
     howItWorksTitle: "Three steps to your first result",
     howItWorks: [
-      { step: "1", title: "Book a free consult", text: "Tell us your goal, your schedule and your budget — no pressure, no sales pitch." },
+      { step: "1", title: "Book a free consult", text: "Tell us your goal, your schedule and your budget: no pressure, no sales pitch." },
       { step: "2", title: "Get your custom plan", text: "Dania builds a plan around your real life: your kitchen, your calendar, your body." },
       { step: "3", title: "Train & transform", text: "Classes, check-ins and community keep you accountable until the results show." },
     ],
@@ -86,12 +86,12 @@ const SITE = {
   about: {
     eyebrow: "Meet the coach",
     title: "About Eurex Fitness",
-    intro: "Eurex Fitness was founded by Dania Eunice with one belief: sustainable weight loss comes from knowledge, community and consistency — not punishment.",
+    intro: "Eurex Fitness was founded by Dania Eunice with one belief: sustainable weight loss comes from knowledge, community and consistency, not punishment.",
     image: "assets/dania.jpg",
     story: [
-      "Dania Eunice started Eurex Fitness after her own wellness journey showed her how much bad advice was out there — extreme diets, impossible routines, and programs designed for bodies and budgets that didn't match real life.",
+      "Dania Eunice started Eurex Fitness after her own wellness journey showed her how much bad advice was out there: extreme diets, impossible routines, and programs designed for bodies and budgets that didn't match real life.",
       "Today, Eurex Fitness coaches hundreds of clients through weight-loss programs, group classes, meal planning and wellness education. Every plan is built around your life: your schedule, your kitchen, your budget.",
-      "Whether you join a class, buy a book, take a course or sign up for coaching — the goal is the same. Results you can keep.",
+      "Whether you join a class, buy a book, take a course or sign up for coaching, the goal is the same. Results you can keep.",
     ],
     credentialsTitle: "Credentials & focus",
     credentials: [
@@ -160,14 +160,14 @@ const SITE = {
         buttonLink: "join.html",
       },
     ],
-    note: "Not sure which is right for you? Fill the Join form and we'll recommend one — free.",
+    note: "Not sure which is right for you? Fill the Join form and we'll recommend one, free.",
   },
 
   /* ---------- BOOKS PAGE ---------- */
   books: {
     eyebrow: "Read & learn",
     title: "Books",
-    intro: "Guides written by Dania Eunice — practical, honest, and built for everyday life.",
+    intro: "Guides written by Dania Eunice: practical, honest, and built for everyday life.",
     items: [
       {
         title: "The Real-Food Weight Loss Guide",
@@ -181,7 +181,7 @@ const SITE = {
         title: "Wellness Habits That Stick",
         price: "₦6,000",
         image: "assets/book2.jpg",
-        description: "The small daily habits behind every long-term transformation — sleep, water, movement, mindset.",
+        description: "The small daily habits behind every long-term transformation: sleep, water, movement, mindset.",
         buttonText: "Buy this book",
         buttonLink: "join.html",
       },
@@ -199,7 +199,7 @@ const SITE = {
         price: "₦25,000",
         image: "assets/course1.jpg",
         lessons: "12 video lessons · 3 workbooks",
-        description: "Everything you need to start losing weight the right way — nutrition basics, movement, and mindset.",
+        description: "Everything you need to start losing weight the right way: nutrition basics, movement, and mindset.",
         buttonText: "Enroll now",
         buttonLink: "join.html",
       },

@@ -1,5 +1,5 @@
 /* ============================================================
-   EUREX FITNESS — APP LOGIC
+   EUREX FITNESS: APP LOGIC
    You normally don't need to edit this file.
    It reads everything from content.js and posts.js
    and builds the pages automatically.
@@ -97,6 +97,7 @@ function buildFooter() {
 function buildPopup() {
   const p = SITE.popup;
   if (!p.enabled) return;
+  if (document.body.dataset.page === "join") return;
   if (p.showOncePerVisit && sessionStorage.getItem("eurexPopupSeen")) return;
 
   const overlay = document.createElement("div");
@@ -122,7 +123,7 @@ function buildPopup() {
   overlay.addEventListener("click", e => { if (e.target === overlay) close(); });
   document.addEventListener("keydown", e => { if (e.key === "Escape") close(); }, { once: true });
 
-  setTimeout(() => overlay.classList.add("show"), 1200);
+  setTimeout(() => overlay.classList.add("show"), 120000);
 }
 
 /* ---------- home ---------- */
@@ -132,7 +133,6 @@ function buildHome() {
   el("#hero").innerHTML = `
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow">${esc(h.heroEyebrow)}</span>
         <h1>${esc(h.heroTitle)}</h1>
         <p class="lead">${esc(h.heroText)}</p>
         <div class="hero-actions">
@@ -141,7 +141,7 @@ function buildHome() {
         </div>
       </div>
       <div class="hero-media">
-        ${imgOrPh(h.heroImage, "Eurex Fitness training", "Your photo here — assets/hero.jpg")}
+        ${imgOrPh(h.heroImage, "Eurex Fitness training", "Your photo here: assets/hero.jpg")}
         <div class="float-card">
           <span class="fc-num">${esc(h.stats[0].number)}</span>
           <span class="fc-lbl">${esc(h.stats[0].label)}</span>
@@ -222,7 +222,7 @@ function buildCtaBand() {
     <div class="wrap">
       <span class="eyebrow">Start today</span>
       <h2>Ready to change<br>how this feels?</h2>
-      <p>Tell us your goal and we'll match you with the right plan — classes, coaching or courses.</p>
+      <p>Tell us your goal and we'll match you with the right plan: classes, coaching or courses.</p>
       <div class="cta-actions">
         <a class="btn btn-light" href="join.html">Join Now</a>
         <a class="btn btn-outline-light" href="plans.html">View Plans</a>
@@ -236,7 +236,7 @@ function buildAbout() {
   el("#page-hero").innerHTML = `<div class="wrap"><span class="eyebrow">${esc(a.eyebrow)}</span><h1>${esc(a.title)}</h1><p>${esc(a.intro)}</p></div>`;
   el("#about-main").innerHTML = `
     <div class="wrap about-grid">
-      <div class="about-media">${imgOrPh(a.image, SITE.brand.owner, "Photo of Dania — assets/dania.jpg")}</div>
+      <div class="about-media">${imgOrPh(a.image, SITE.brand.owner, "Photo of Dania: assets/dania.jpg")}</div>
       <div class="about-copy">
         ${a.story.map(p => `<p>${esc(p)}</p>`).join("")}
         <h3 style="margin-top:8px">${esc(a.credentialsTitle)}</h3>
@@ -286,7 +286,7 @@ function postCard(p) {
 }
 
 function buildBlogList() {
-  el("#page-hero").innerHTML = `<div class="wrap"><span class="eyebrow">Eurex Fitness Blog</span><h1>Articles & Tips</h1><p>Weight loss, wellness and motivation — written by ${esc(SITE.brand.owner)}.</p></div>`;
+  el("#page-hero").innerHTML = `<div class="wrap"><span class="eyebrow">Eurex Fitness Blog</span><h1>Articles & Tips</h1><p>Weight loss, wellness and motivation, written by ${esc(SITE.brand.owner)}.</p></div>`;
   el("#blog-main").innerHTML = `<div class="wrap"><div class="post-grid">${POSTS.map(postCard).join("")}</div></div>`;
   buildCtaBand();
 }
@@ -294,7 +294,7 @@ function buildBlogList() {
 function buildSinglePost() {
   const id = new URLSearchParams(location.search).get("id");
   const post = POSTS.find(p => p.id === id) || POSTS[0];
-  document.title = `${post.title} — ${SITE.brand.name}`;
+  document.title = `${post.title} | ${SITE.brand.name}`;
   el("#post-main").innerHTML = `
     <div class="wrap article">
       <p><a href="blog.html">← All articles</a></p>

@@ -1,5 +1,5 @@
 /* ============================================================
-   EUREX FITNESS — DESIGN SYSTEM
+   EUREX FITNESS: DESIGN SYSTEM
    You normally don't need to touch this file.
    To change the main red colour, edit --red below.
    ============================================================ */
@@ -80,17 +80,10 @@ h3 { font-size: 1.3rem; font-weight: 600; }
   color: var(--red);
   margin-bottom: 18px;
 }
-.eyebrow::before {
-  content: "";
-  width: 26px; height: 2px;
-  background: var(--red);
-  display: inline-block;
-}
 .section-head { max-width: 640px; margin-bottom: 48px; }
 .section-head p { color: var(--muted); margin-top: 16px; font-size: 1.06rem; }
 .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
 .section-head.center .eyebrow { justify-content: center; }
-.section-head.center .eyebrow::before { display: none; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -463,11 +456,12 @@ h3 { font-size: 1.3rem; font-weight: 600; }
 .popup-body h3 { color: var(--wine); font-size: 1.5rem; margin-bottom: 12px; }
 .popup-body p { color: var(--muted); font-size: .97rem; margin-bottom: 24px; }
 .popup-close {
-  position: absolute; top: 14px; right: 14px;
+  position: absolute; top: 14px; right: 14px; z-index: 2;
   width: 38px; height: 38px; border-radius: 50%;
   background: #fff; border: none; cursor: pointer;
   font-size: 1.1rem; line-height: 1; color: var(--ink);
-  box-shadow: 0 4px 14px rgba(0,0,0,.2);
+  box-shadow: 0 4px 14px rgba(0,0,0,.35);
+  display: flex; align-items: center; justify-content: center;
 }
 .popup-close:hover { background: var(--blush); }
 
