@@ -16,7 +16,7 @@ const SITE = {
     name: "Eurex Fitness",
     owner: "Coach Eurexfitness",
     tagline: "Weight loss & wellness, done right.",
-    logo: "assets/logo.svg",
+    logo: "assets/logo.png",
     whatsapp: "https://wa.me/2348077959861",
     instagram: "https://instagram.com/eurexfitness",
     email: "info@eurexfitness.com",
