@@ -23,13 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ---------- helpers ---------- */
 function el(sel) { return document.querySelector(sel); }
 function esc(s) { return String(s ?? ""); }
-function imgOrPh(src, alt, label) {
-  return `<img src="${esc(src)}" alt="${esc(alt)}"
+function imgOrPh(src, alt, label, eager) {
+  const loading = eager ? `loading="eager" fetchpriority="high"` : `loading="lazy"`;
+  return `<img src="${esc(src)}" alt="${esc(alt)}" ${loading}
     onerror="this.outerHTML='<div class=&quot;ph&quot;>${esc(label || alt)}</div>'">`;
 }
 function initialsAvatar(t) {
   return t.image
-    ? `<div class="avatar"><img src="${esc(t.image)}" alt="${esc(t.name)}" onerror="this.parentElement.innerHTML='${esc(t.initials)}'"></div>`
+    ? `<div class="avatar"><img src="${esc(t.image)}" alt="${esc(t.name)}" loading="lazy" onerror="this.parentElement.innerHTML='${esc(t.initials)}'"></div>`
     : `<div class="avatar">${esc(t.initials)}</div>`;
 }
 
@@ -141,7 +142,7 @@ function buildHome() {
         </div>
       </div>
       <div class="hero-media">
-        ${imgOrPh(h.heroImage, "Eurex Fitness training", "Your photo here: assets/hero.jpg")}
+        ${imgOrPh(h.heroImage, "Eurex Fitness training", "Your photo here: assets/hero.jpg", true)}
         <div class="float-card">
           <span class="fc-num">${esc(h.stats[0].number)}</span>
           <span class="fc-lbl">${esc(h.stats[0].label)}</span>
@@ -236,7 +237,7 @@ function buildAbout() {
   el("#page-hero").innerHTML = `<div class="wrap"><span class="eyebrow">${esc(a.eyebrow)}</span><h1>${esc(a.title)}</h1><p>${esc(a.intro)}</p></div>`;
   el("#about-main").innerHTML = `
     <div class="wrap about-grid">
-      <div class="about-media">${imgOrPh(a.image, SITE.brand.owner, "Photo of Dania: assets/dania.jpg")}</div>
+      <div class="about-media">${imgOrPh(a.image, SITE.brand.owner, "Photo of Dania: assets/dania.jpg", true)}</div>
       <div class="about-copy">
         ${a.story.map(p => `<p>${esc(p)}</p>`).join("")}
         <h3 style="margin-top:8px">${esc(a.credentialsTitle)}</h3>
@@ -300,7 +301,7 @@ function buildSinglePost() {
       <p><a href="blog.html">← All articles</a></p>
       <div class="post-meta" style="margin-top:22px">${esc(post.category)} · ${esc(post.date)}</div>
       <h1>${esc(post.title)}</h1>
-      <div class="post-hero">${imgOrPh(post.image, post.title, post.category)}</div>
+      <div class="post-hero">${imgOrPh(post.image, post.title, post.category, true)}</div>
       <div class="article-body">${post.body}</div>
       <p style="margin-top:44px"><a class="btn btn-solid" href="join.html">Join Eurex Fitness</a></p>
     </div>`;
