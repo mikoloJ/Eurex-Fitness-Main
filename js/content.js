@@ -70,7 +70,6 @@ const SITE = {
       { step: "3", title: "Train & transform", text: "Classes, check-ins and community keep you accountable until the results show." },
     ],
 
-    testimonialEyebrow: "Real results",
     testimonialTitle: "Proof, not promises",
     testimonials: [
       { quote: "I lost 14kg in five months and never felt like I was punishing myself. Coach Eurexfitness changed how I think about food completely.", name: "Chioma A.", result: "−14kg in 5 months", initials: "CA" },

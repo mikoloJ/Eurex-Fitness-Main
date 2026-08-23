@@ -70,8 +70,18 @@ function buildFooter() {
           <img src="${esc(b.logo)}" alt="${esc(b.name)} logo">
           <p>${esc(SITE.footer.text)}</p>
           <div class="footer-social">
-            <a href="${esc(b.instagram)}" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-            <a href="${esc(b.whatsapp)}" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+            <a href="${esc(b.instagram)}" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="${esc(b.whatsapp)}" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.44 9.9-9.9S17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.16-4.94-4.35-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.83 2 .9 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.29-.12.57.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.14.46.12.63-.07.17-.19.72-.84.92-1.13.19-.29.38-.24.64-.14.26.1 1.66.78 1.94.92.29.14.48.21.55.33.07.12.07.68-.17 1.36z"/></svg>
+            </a>
+            <a href="mailto:${esc(b.email)}" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </a>
+            <a href="tel:${esc(b.phone).replace(/\s+/g, "")}" aria-label="Call">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.5c0-.6.4-1 1-1h3.6c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1L6.6 10.8z"/></svg>
+            </a>
           </div>
         </div>
         <div>
@@ -188,7 +198,7 @@ function buildHome() {
 
   el("#testimonials").innerHTML = `
     <div class="wrap">
-      <div class="section-head"><span class="eyebrow">${esc(h.testimonialEyebrow)}</span><h2>${esc(h.testimonialTitle)}</h2></div>
+      <div class="section-head"><h2>${esc(h.testimonialTitle)}</h2></div>
       <div class="quote-scroller">
         ${h.testimonials.map(t => `
           <div class="quote-card">
@@ -210,7 +220,7 @@ function buildBlogPreview() {
   if (!target) return;
   target.innerHTML = `
     <div class="wrap">
-      <div class="section-head"><span class="eyebrow">From the blog</span><h2>Latest articles</h2></div>
+      <div class="section-head"><h2>Latest articles</h2></div>
       <div class="post-grid">${POSTS.slice(0, 3).map(postCard).join("")}</div>
       <p style="margin-top:38px"><a class="btn btn-ghost" href="blog.html">Read all articles</a></p>
     </div>`;
@@ -221,7 +231,6 @@ function buildCtaBand() {
   if (!target) return;
   target.innerHTML = `
     <div class="wrap">
-      <span class="eyebrow">Start today</span>
       <h2>Ready to change<br>how this feels?</h2>
       <p>Tell us your goal and we'll match you with the right plan: classes, coaching or courses.</p>
       <div class="cta-actions">
