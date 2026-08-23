@@ -121,12 +121,22 @@ h3 { font-size: 1.3rem; font-weight: 600; }
   border-bottom: 1px solid var(--line);
 }
 .nav {
-  display: flex; align-items: center; justify-content: space-between;
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px;
   padding: 16px 0;
 }
-.logo { display: flex; align-items: center; gap: 10px; }
+.logo { display: flex; align-items: center; gap: 10px; justify-self: start; }
 .logo img { height: 40px; width: auto; }
-.nav-links { display: flex; align-items: center; gap: 30px; list-style: none; }
+.nav-links { display: flex; align-items: center; justify-content: center; gap: 30px; list-style: none; justify-self: center; }
+.nav-mobile-cta { display: none; }
+.nav-actions { display: flex; align-items: center; gap: 14px; justify-self: end; }
+.nav-actions .nav-cta { white-space: nowrap; }
+.nav-whatsapp {
+  width: 38px; height: 38px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--red); border: 1px solid var(--line);
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.nav-whatsapp:hover { background: var(--red); border-color: var(--red); color: #fff; }
 .nav-links a {
   color: var(--ink); font-weight: 600; font-size: .92rem;
   padding: 6px 1px; border-bottom: 1.5px solid transparent;
@@ -134,11 +144,11 @@ h3 { font-size: 1.3rem; font-weight: 600; }
 }
 .nav-links a:hover { color: var(--red); }
 .nav-links a.active { color: var(--red); border-bottom-color: var(--red); }
-.nav-links .nav-cta {
+.nav-cta {
   background: var(--red); color: #fff; padding: 12px 24px; border-radius: 999px;
   border-bottom: none; font-weight: 700;
 }
-.nav-links .nav-cta:hover { background: var(--red-deep); }
+.nav-cta:hover { background: var(--red-deep); }
 
 .nav-toggle {
   display: none;
@@ -513,8 +523,12 @@ h3 { font-size: 1.3rem; font-weight: 600; }
 }
 
 @media (max-width: 860px) {
+  .nav { display: flex; justify-content: space-between; }
+  .nav-actions { display: none; }
+  .nav-mobile-cta { display: list-item; }
   .nav-toggle { display: block; }
   .nav-links {
+    justify-self: auto;
     position: absolute; top: 100%; left: 0; right: 0;
     background: #fff; border-bottom: 1px solid var(--line);
     flex-direction: column; align-items: stretch; gap: 0;
