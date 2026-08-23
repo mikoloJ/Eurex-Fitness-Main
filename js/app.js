@@ -86,11 +86,11 @@ function buildFooter() {
           <h4>Contact</h4>
           <ul>
             <li><a href="mailto:${esc(b.email)}">${esc(b.email)}</a></li>
-            <li><a href="tel:${esc(b.phone)}">${esc(b.phone)}</a></li>
+            <li><a href="tel:${esc(b.phone).replace(/\s+/g, "")}">${esc(b.phone)}</a></li>
           </ul>
         </div>
       </div>
-      <p class="copyright">© ${new Date().getFullYear()} ${esc(b.name)} · ${esc(b.owner)}. All rights reserved.</p>
+      <p class="copyright">© ${new Date().getFullYear()} ${esc(b.name)}. All rights reserved.</p>
     </div>`;
 }
 
@@ -237,7 +237,7 @@ function buildAbout() {
   el("#page-hero").innerHTML = `<div class="wrap"><span class="eyebrow">${esc(a.eyebrow)}</span><h1>${esc(a.title)}</h1><p>${esc(a.intro)}</p></div>`;
   el("#about-main").innerHTML = `
     <div class="wrap about-grid">
-      <div class="about-media">${imgOrPh(a.image, SITE.brand.owner, "Photo of Dania: assets/dania.jpg", true)}</div>
+      <div class="about-media">${imgOrPh(a.image, "Eurex Fitness coach", "Photo of your coach: assets/coach.jpg", true)}</div>
       <div class="about-copy">
         ${a.story.map(p => `<p>${esc(p)}</p>`).join("")}
         <h3 style="margin-top:8px">${esc(a.credentialsTitle)}</h3>
@@ -287,7 +287,7 @@ function postCard(p) {
 }
 
 function buildBlogList() {
-  el("#page-hero").innerHTML = `<div class="wrap"><span class="eyebrow">Eurex Fitness Blog</span><h1>Articles & Tips</h1><p>Weight loss, wellness and motivation, written by ${esc(SITE.brand.owner)}.</p></div>`;
+  el("#page-hero").innerHTML = `<div class="wrap"><span class="eyebrow">Eurex Fitness Blog</span><h1>Articles & Tips</h1><p>Weight loss, wellness and motivation, written by the Eurex Fitness team.</p></div>`;
   el("#blog-main").innerHTML = `<div class="wrap"><div class="post-grid">${POSTS.map(postCard).join("")}</div></div>`;
   buildCtaBand();
 }

@@ -35,6 +35,9 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  /* Keep the marquee scrolling: it's a branding element, not motion that
+     causes discomfort, so it's exempt from the reduced-motion cutoff. */
+  .marquee-track { animation: scroll-left 32s linear infinite !important; }
 }
 
 body {

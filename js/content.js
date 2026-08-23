@@ -14,20 +14,19 @@ const SITE = {
   /* ---------- BRAND ---------- */
   brand: {
     name: "Eurex Fitness",
-    owner: "Dania Eunice",
     tagline: "Weight loss & wellness, done right.",
     logo: "assets/logo.svg",
-    whatsapp: "https://wa.me/2340000000000",
+    whatsapp: "https://wa.me/2348077959861",
     instagram: "https://instagram.com/eurexfitness",
-    email: "hello@eurexfitness.com",
-    phone: "+234 000 000 0000",
+    email: "info@eurexfitness.com",
+    phone: "+234 807 795 9861",
   },
 
   /* ---------- POP-UP ---------- */
   popup: {
     enabled: true,
     title: "New here? Start strong.",
-    text: "Join the Eurex Fitness community and get a free wellness starter guide, plus class schedules and weight-loss tips straight from Dania.",
+    text: "Join the Eurex Fitness community and get a free wellness starter guide, plus class schedules and weight-loss tips straight from your coach.",
     image: "assets/popup.jpg",
     buttonText: "Join Now",
     buttonLink: "join.html",
@@ -38,7 +37,7 @@ const SITE = {
   home: {
     heroEyebrow: "Eurex Fitness · Weight Loss & Wellness",
     heroTitle: "Lose the weight.\nKeep the life.",
-    heroText: "Coaching, classes and real-food plans by Dania Eunice, built for lasting results, not crash diets.",
+    heroText: "Coaching, classes and real-food plans built for lasting results, not crash diets.",
     heroButton1: { text: "Join Now", link: "join.html" },
     heroButton2: { text: "See Plans & Classes", link: "plans.html" },
     heroImage: "assets/hero.jpg",
@@ -68,14 +67,14 @@ const SITE = {
     howItWorksTitle: "Three steps to your first result",
     howItWorks: [
       { step: "1", title: "Book a free consult", text: "Tell us your goal, your schedule and your budget: no pressure, no sales pitch." },
-      { step: "2", title: "Get your custom plan", text: "Dania builds a plan around your real life: your kitchen, your calendar, your body." },
+      { step: "2", title: "Get your custom plan", text: "We build a plan around your real life: your kitchen, your calendar, your body." },
       { step: "3", title: "Train & transform", text: "Classes, check-ins and community keep you accountable until the results show." },
     ],
 
     testimonialEyebrow: "Real results",
     testimonialTitle: "Proof, not promises",
     testimonials: [
-      { quote: "I lost 14kg in five months and never felt like I was punishing myself. Dania changed how I think about food completely.", name: "Chioma A.", result: "−14kg in 5 months", initials: "CA" },
+      { quote: "I lost 14kg in five months and never felt like I was punishing myself. The coaching changed how I think about food completely.", name: "Chioma A.", result: "−14kg in 5 months", initials: "CA" },
       { quote: "The classes are addictive. I came for weight loss and stayed for the energy and the community.", name: "Tolu B.", result: "−9kg in 4 months", initials: "TB" },
       { quote: "Her plan fit my budget and my real schedule. That's exactly why it worked when every diet before it failed.", name: "Amara O.", result: "−11kg in 6 months", initials: "AO" },
       { quote: "I stopped seeing food as the enemy. Two years later the weight is still off, and so are my old habits.", name: "Ifeoma K.", result: "−18kg, kept off", initials: "IK" },
@@ -86,10 +85,10 @@ const SITE = {
   about: {
     eyebrow: "Meet the coach",
     title: "About Eurex Fitness",
-    intro: "Eurex Fitness was founded by Dania Eunice with one belief: sustainable weight loss comes from knowledge, community and consistency, not punishment.",
-    image: "assets/dania.jpg",
+    intro: "Eurex Fitness was founded with one belief: sustainable weight loss comes from knowledge, community and consistency, not punishment.",
+    image: "assets/coach.jpg",
     story: [
-      "Dania Eunice started Eurex Fitness after her own wellness journey showed her how much bad advice was out there: extreme diets, impossible routines, and programs designed for bodies and budgets that didn't match real life.",
+      "Eurex Fitness started after a personal wellness journey revealed how much bad advice was out there: extreme diets, impossible routines, and programs designed for bodies and budgets that didn't match real life.",
       "Today, Eurex Fitness coaches hundreds of clients through weight-loss programs, group classes, meal planning and wellness education. Every plan is built around your life: your schedule, your kitchen, your budget.",
       "Whether you join a class, buy a book, take a course or sign up for coaching, the goal is the same. Results you can keep.",
     ],
@@ -151,7 +150,7 @@ const SITE = {
         featured: false,
         badge: "",
         features: [
-          "Daily direct access to Dania",
+          "Daily direct access to your coach",
           "Fully personalised training & meals",
           "Home or gym session options",
           "Monthly body composition review",
@@ -167,7 +166,7 @@ const SITE = {
   books: {
     eyebrow: "Read & learn",
     title: "Books",
-    intro: "Guides written by Dania Eunice: practical, honest, and built for everyday life.",
+    intro: "Guides that are practical, honest, and built for everyday life.",
     items: [
       {
         title: "The Real-Food Weight Loss Guide",
@@ -233,7 +232,7 @@ const SITE = {
 
   /* ---------- FOOTER ---------- */
   footer: {
-    text: "Weight loss & wellness coaching by Dania Eunice.",
+    text: "Weight loss & wellness coaching.",
     links: [
       { text: "Home", link: "index.html" },
       { text: "About", link: "about.html" },

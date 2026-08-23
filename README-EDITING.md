@@ -1,5 +1,5 @@
 # EUREX FITNESS — How to Edit Your Website
-### A guide for Dania / site manager (no coding needed)
+### A guide for the site manager (no coding needed)
 
 ---
 
@@ -48,7 +48,7 @@ logo: "assets/logo.svg",   →   logo: "assets/logo.png",
 Until then, the site uses a temporary Eurex wordmark included in the design.
 
 Image slots the site expects (all optional — a styled red placeholder shows until you add them):
-`assets/hero.jpg`, `assets/dania.jpg`, `assets/popup.jpg`,
+`assets/hero.jpg`, `assets/coach.jpg`, `assets/popup.jpg`,
 `assets/book1.jpg`, `assets/book2.jpg`,
 `assets/course1.jpg`–`course3.jpg`, `assets/blog1.jpg`–`blog3.jpg`
 
