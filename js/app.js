@@ -90,7 +90,7 @@ function buildFooter() {
           </ul>
         </div>
       </div>
-      <p class="copyright">© ${new Date().getFullYear()} ${esc(b.name)}. All rights reserved.</p>
+      <p class="copyright">© ${new Date().getFullYear()} ${esc(b.name)} · ${esc(b.owner)}. All rights reserved.</p>
     </div>`;
 }
 
@@ -162,7 +162,7 @@ function buildHome() {
 
   el("#pillars").innerHTML = `
     <div class="wrap">
-      <div class="section-head"><span class="eyebrow">${esc(h.pillarsEyebrow)}</span><h2>${esc(h.pillarsTitle)}</h2></div>
+      <div class="section-head"><h2>${esc(h.pillarsTitle)}</h2></div>
       <div class="pillar-list">
         ${h.pillars.map(c => `
           <div class="pillar-row">
@@ -175,7 +175,7 @@ function buildHome() {
   el("#how-it-works").innerHTML = `
     <div class="wrap">
       <div class="section-head center" style="margin-left:auto;margin-right:auto">
-        <span class="eyebrow">${esc(h.howItWorksEyebrow)}</span><h2>${esc(h.howItWorksTitle)}</h2>
+        <h2>${esc(h.howItWorksTitle)}</h2>
       </div>
       <div class="steps-grid">
         ${h.howItWorks.map(s => `
@@ -237,7 +237,7 @@ function buildAbout() {
   el("#page-hero").innerHTML = `<div class="wrap"><span class="eyebrow">${esc(a.eyebrow)}</span><h1>${esc(a.title)}</h1><p>${esc(a.intro)}</p></div>`;
   el("#about-main").innerHTML = `
     <div class="wrap about-grid">
-      <div class="about-media">${imgOrPh(a.image, "Eurex Fitness coach", "Photo of your coach: assets/coach.jpg", true)}</div>
+      <div class="about-media">${imgOrPh(a.image, SITE.brand.owner, "Photo of Coach Eurexfitness: assets/coach.jpg", true)}</div>
       <div class="about-copy">
         ${a.story.map(p => `<p>${esc(p)}</p>`).join("")}
         <h3 style="margin-top:8px">${esc(a.credentialsTitle)}</h3>
@@ -287,7 +287,7 @@ function postCard(p) {
 }
 
 function buildBlogList() {
-  el("#page-hero").innerHTML = `<div class="wrap"><span class="eyebrow">Eurex Fitness Blog</span><h1>Articles & Tips</h1><p>Weight loss, wellness and motivation, written by the Eurex Fitness team.</p></div>`;
+  el("#page-hero").innerHTML = `<div class="wrap"><span class="eyebrow">Eurex Fitness Blog</span><h1>Articles & Tips</h1><p>Weight loss, wellness and motivation, written by ${esc(SITE.brand.owner)}.</p></div>`;
   el("#blog-main").innerHTML = `<div class="wrap"><div class="post-grid">${POSTS.map(postCard).join("")}</div></div>`;
   buildCtaBand();
 }

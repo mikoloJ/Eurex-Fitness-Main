@@ -272,7 +272,7 @@ h3 { font-size: 1.3rem; font-weight: 600; }
 .section.tight-top { padding-top: clamp(40px,6vw,64px); }
 
 /* ---------- Pillars (numbered, editorial) ---------- */
-.pillar-list { display: flex; flex-direction: column; }
+.pillar-list { display: flex; flex-direction: column; max-width: 700px; }
 .pillar-row {
   display: grid; grid-template-columns: 90px 1fr; gap: 28px;
   padding: 34px 0;
@@ -505,6 +505,8 @@ h3 { font-size: 1.3rem; font-weight: 600; }
   .about-media { position: static; max-width: 440px; }
   .footer-top { grid-template-columns: 1fr 1fr; }
   .steps-grid { grid-template-columns: 1fr; gap: 40px; }
+  .step-card { text-align: center; }
+  .step-card p { max-width: 420px; margin-left: auto; margin-right: auto; }
   .stat-row { grid-template-columns: repeat(2, 1fr); row-gap: 24px; }
   .stat:nth-child(3) { border-left: none; padding-left: 0; }
 }
@@ -520,7 +522,7 @@ h3 { font-size: 1.3rem; font-weight: 600; }
     box-shadow: 0 24px 48px rgba(28,17,20,.14);
   }
   .nav-links.open { display: flex; }
-  .nav-links a { padding: 15px 6px; border-bottom: 1px solid var(--line); }
+  .nav-links a { display: block; padding: 15px 6px; border-bottom: 1px solid var(--line); }
   .nav-links .nav-cta { margin-top: 14px; text-align: center; justify-content: center; }
   .pillar-row { grid-template-columns: 56px 1fr; }
 }
